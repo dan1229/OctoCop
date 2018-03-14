@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private Animator myAnimation;
+    [SerializeField]
+    private float declerationPercent;
     
 	// Use this for initialization
 	void Start () {
@@ -64,7 +66,7 @@ public class PlayerMovement : MonoBehaviour {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             moveVelocity = -movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
@@ -82,9 +84,14 @@ public class PlayerMovement : MonoBehaviour {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
+        }
+        else if (grounded == true && myRigidBody.velocity.x!=0)
+        {
+            moveVelocity = myRigidBody.velocity.x * declerationPercent;
+            myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
 
 

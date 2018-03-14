@@ -143,7 +143,7 @@ MonoBehaviour:
   jumpHeight: 2
   grounded: 0
   groundCheck: {fileID: 620260329}
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 81764e89eabedd14db5c98ff4cc6fd47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f29c1eb568f9aa2408360dd5df5070df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -213,7 +213,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302145328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.018, y: 0.256, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1374043792}
@@ -237,14 +237,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.75, y: 0.75}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.14}
+  m_Size: {x: 0.76, y: 0.76}
   m_EdgeRadius: 0
 --- !u!50 &302145334
 Rigidbody2D:
@@ -318,7 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.76, y: 0.76}
   m_EdgeRadius: 0
 --- !u!1 &621517445
 GameObject:
@@ -409,8 +409,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621517445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: -0.3128, z: 0}
-  m_LocalScale: {x: 13.041862, y: 0.37446547, z: 1}
+  m_LocalPosition: {x: 1.342, y: -0.3128, z: 0}
+  m_LocalScale: {x: 26.465212, y: 0.37446547, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -488,7 +488,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.35511494
+  orthographic size: 0.9998886
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
