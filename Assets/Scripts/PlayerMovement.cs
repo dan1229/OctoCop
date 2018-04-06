@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             moveVelocity = movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow)&& grounded)
             {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
             }
@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             moveVelocity = -movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) && grounded)
             {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
             }
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow) && grounded)
         {
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
         }
@@ -93,8 +93,6 @@ public class PlayerMovement : MonoBehaviour {
             moveVelocity = myRigidBody.velocity.x * declerationPercent;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
-
-
 
     }
 }
