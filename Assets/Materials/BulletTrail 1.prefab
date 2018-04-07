@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d0e6f36b011c340acd2b8d5443d7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 230
+  movespeed: 2
 --- !u!120 &120217150578763656
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -87,7 +87,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0.2, y: 0, z: 0}
+  - {x: 0.05, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.05
