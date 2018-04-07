@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletTrail : MonoBehaviour {
 
-    public int movespeed = 230;
+    public float movespeed = 1;
 	
 	// Update is called once per frame
 	void Update () {
