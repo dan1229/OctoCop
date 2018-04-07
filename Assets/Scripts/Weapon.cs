@@ -10,8 +10,11 @@ public class Weapon : MonoBehaviour {
 	public Transform BulletTrailPrefab;
 	float timeToSpawnEffect = 0;
 	public float effectSpawnRate = 10;
-	
-	float timeToFire = 0;
+    [SerializeField]
+    private Animator myAnimation;
+
+
+    float timeToFire = 0;
 	Transform firePoint;
 
 	// Use this for initialization
@@ -26,15 +29,21 @@ public class Weapon : MonoBehaviour {
 	void Update () {
 		if (fireRate == 0) {
 			if (Input.GetKey(KeyCode.Space)) {
-				Shoot();
+                myAnimation.SetBool("Shooting", true);
+                Shoot();
 			}
-		}
+            else
+                myAnimation.SetBool("Shooting", false);
+        }
 		else {
 			if (Input.GetKey(KeyCode.Space) && Time.time > timeToFire) {
-				timeToFire = Time.time + 1/fireRate;
+                myAnimation.SetBool("Shooting", true);
+                timeToFire = Time.time + 1/fireRate;
 				Shoot();
 			}
-		}
+            else
+                myAnimation.SetBool("Shooting", false);
+        }
 	}
 	
 	void Shoot () {
