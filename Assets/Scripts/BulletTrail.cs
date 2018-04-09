@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BulletTrail : MonoBehaviour {
 
-    public float movespeed = 1;
-	
-	// Update is called once per frame
-	void Update () {
+    public float movespeed = 3;
+    //Transform currentPosition;
+
+    void Awake()
+    {
+    }
+
+    // Update is called once per frame
+    void Update () {
         Vector3 mousePosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
-        transform.Translate(mousePosition * Time.deltaTime * movespeed);
+        Vector3 currentlocation = transform.position;
+        transform.Translate((mousePosition - currentlocation) * Time.deltaTime * movespeed);
         Destroy(gameObject, 1);
 	}
 }

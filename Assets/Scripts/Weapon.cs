@@ -62,9 +62,9 @@ public class Weapon : MonoBehaviour {
 	}
 	
 	void Effect () {
-        Vector3 mousePosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
-        Vector3 firePointPosition = new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z);
-        firePoint.rotation.SetFromToRotation(firePointPosition, mousePosition);
+        //Vector3 mousePosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+        //Vector3 firePointPosition = new Vector3(firePoint.position.x, firePoint.position.y, firePoint.position.z);
+        //firePoint.rotation.SetFromToRotation(firePointPosition, mousePosition);
 		Instantiate (BulletTrailPrefab, firePoint.position, firePoint.rotation);
 	}
 }
