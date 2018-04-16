@@ -18,12 +18,6 @@ public class EnemyMovement : MonoBehaviour {
         myAnimation = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
-    {
-        //moveVelocity = movespeed;
-        //myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -35,14 +29,21 @@ public class EnemyMovement : MonoBehaviour {
             moveVelocity = movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
+        if (myRigidBody.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (myRigidBody.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "GroundLayer")
         {
-            moveVelocity = -movespeed;
-            myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
+            movespeed *= -1;
         }
     }
 }
