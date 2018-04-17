@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114083831310006598}
   - component: {fileID: 95486427409176854}
   m_Layer: 0
-  m_Name: slug-idle-blue (1)
+  m_Name: Slug_High_Speed
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
