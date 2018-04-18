@@ -96,7 +96,6 @@ public class PlayerMovement : MonoBehaviour {
             moveVelocity = myRigidBody.velocity.x * declerationPercent;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
-
     }
 
     void OnCollisionEnter2D(Collision2D col)
