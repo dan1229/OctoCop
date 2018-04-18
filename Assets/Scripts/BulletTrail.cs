@@ -18,4 +18,13 @@ public class BulletTrail : MonoBehaviour {
         transform.Translate((mousePosition - currentlocation) * Time.deltaTime * movespeed);
         Destroy(gameObject, 1);
 	}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            print("WASTED");
+            Destroy(col.gameObject);
+        }
+    }
 }

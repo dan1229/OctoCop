@@ -11,7 +11,7 @@ public class EnemyDamage : MonoBehaviour {
         if(col.gameObject.tag == "Player")
         {
             print("WASTED");
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
         }
     }
 
@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour {
         if(col.gameObject.tag == "Player")
         {
             print("WASTED");
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }

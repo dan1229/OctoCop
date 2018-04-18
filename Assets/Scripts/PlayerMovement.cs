@@ -20,12 +20,15 @@ public class PlayerMovement : MonoBehaviour {
     private Animator myAnimation;
     [SerializeField]
     private float declerationPercent;
-    
-	// Use this for initialization
-	void Start () {
+    private Vector3 origTrans;
+
+
+    // Use this for initialization
+    void Start () {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimation = GetComponent<Animator>();
-	}
+        origTrans = transform.position;
+    }
 
     void FixedUpdate()
     {
@@ -94,5 +97,17 @@ public class PlayerMovement : MonoBehaviour {
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
 
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "BossZone")
+        {
+            origTrans = transform.position;
+        }
+        if(col.gameObject.tag == "Enemy")
+        {
+            transform.position = origTrans;
+        }
     }
 }
