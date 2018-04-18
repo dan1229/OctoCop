@@ -1029,9 +1029,9 @@ GameObject:
   - component: {fileID: 732281688}
   - component: {fileID: 732281687}
   - component: {fileID: 732281686}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: rope1
-  m_TagString: Untagged
+  m_TagString: GroundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
