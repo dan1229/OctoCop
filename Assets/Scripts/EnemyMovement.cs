@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour {
     private float movespeed;
     private float moveVelocity;
     private Animator myAnimation;
+    bool shot;
+    int count;
 
     // Use this for initialization
     void Start () {
@@ -21,11 +23,7 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        var vertical = Input.GetAxis("Vertical");
-        myAnimation.SetFloat("Speed", vertical);
-        var horizontal = Input.GetAxis("Horizontal");
-        myAnimation.SetFloat("Speed", horizontal);
-        if (myRigidBody.velocity.x == 0) { 
+        if (myRigidBody.velocity.x == 0 && !shot) { 
             moveVelocity = movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
         }
@@ -37,6 +35,16 @@ public class EnemyMovement : MonoBehaviour {
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
         }
+        if (shot)
+        {
+            count++;
+            if (count == 10)
+            {
+                shot = false;
+                count = 0;
+            }
+            
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -44,6 +52,12 @@ public class EnemyMovement : MonoBehaviour {
         if (col.gameObject.tag == "GroundLayer")
         {
             movespeed *= -1;
+        }
+        if(col.gameObject.tag == "Bullet")
+        {
+            moveVelocity = 0;
+            myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
+            shot = true;
         }
     }
 }

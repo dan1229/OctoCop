@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - GroundLayer
   - BossZone
+  - Bullet
+  - Destroyable
   layers:
   - Default
   - TransparentFX

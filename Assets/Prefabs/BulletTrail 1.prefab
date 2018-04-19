@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114406975458209674}
   m_Layer: 0
   m_Name: BulletTrail 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 2
+  mousePosition: {x: 0, y: 0, z: 0}
 --- !u!120 &120217150578763656
 LineRenderer:
   m_ObjectHideFlags: 1

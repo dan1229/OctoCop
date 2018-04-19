@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -23,10 +24,7 @@ public class BossMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var vertical = Input.GetAxis("Vertical");
-        myAnimation.SetFloat("Speed", vertical);
-        var horizontal = Input.GetAxis("Horizontal");
-        myAnimation.SetFloat("Speed", horizontal);
+        myAnimation.SetFloat("Speed", myRigidBody.velocity.x);
         if (myRigidBody.velocity.x == 0)
         {
             moveVelocity = movespeed;
@@ -48,6 +46,14 @@ public class BossMovement : MonoBehaviour
         if (col.gameObject.tag == "Destroyable")
         {
             Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "GroundLayer")
+        {
+            movespeed *= -1;
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Boss");
         }
     }
 }
