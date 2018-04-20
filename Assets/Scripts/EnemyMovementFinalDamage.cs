@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
-public class EnemyMovement : MonoBehaviour {
+public class EnemyMovementFinalDamage : MonoBehaviour {
 
     private Rigidbody2D myRigidBody;
     [SerializeField]
@@ -58,6 +59,10 @@ public class EnemyMovement : MonoBehaviour {
             moveVelocity = 0;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
             shot = true;
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("Level2");
         }
     }
 }
