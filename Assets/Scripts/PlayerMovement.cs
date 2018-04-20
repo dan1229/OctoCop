@@ -108,5 +108,9 @@ public class PlayerMovement : MonoBehaviour {
         {
             transform.position = origTrans;
         }
+        if (col.gameObject.layer.Equals( "Enemies"))
+        {
+            transform.position = origTrans;
+        }
     }
 }
