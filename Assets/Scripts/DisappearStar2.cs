@@ -23,7 +23,7 @@ public class DisappearStar2 : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-            SceneManager.LoadScene("middlelevel");
+            SceneManager.LoadScene("Level2");
         }
     }
 }
