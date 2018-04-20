@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "GroundLayer")
+        if (col.gameObject.tag == "GroundLayer" || col.gameObject.layer.Equals("GroundLayer"))
         {
             movespeed *= -1;
         }
