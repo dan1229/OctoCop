@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/MainMenu.unity
     guid: 8a29cccba87ae2d49a95bbc27a28dde0
   - enabled: 1
+    path: Assets/in_between_1.unity
+    guid: a08bc2a3c5f60464488f761d72559d91
+  - enabled: 1
+    path: Assets/in_between_2.unity
+    guid: b992175c8791dcb49a8d0178d59dcb8e
+  - enabled: 1
     path: Assets/beginning.unity
     guid: 7c2702230ad2c164a8f3127991415dbd
   - enabled: 1

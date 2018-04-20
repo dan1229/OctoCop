@@ -9,6 +9,7 @@ TagManager:
   - BossZone
   - Bullet
   - Destroyable
+  - music_main_theme
   layers:
   - Default
   - TransparentFX
