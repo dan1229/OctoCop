@@ -1,16 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class dont_destroy_3 : MonoBehaviour
+{
+    void Awake()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("music_lvl3");
+        if (objs.Length > 1)
+            Destroy(this.gameObject);
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        DontDestroyOnLoad(this.gameObject);
+    }
 }
