@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             moveVelocity = movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
-            if (Input.GetKey(KeyCode.UpArrow)&& grounded)
+            if (Input.GetKey(KeyCode.W)&& grounded)
             {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
             }
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             moveVelocity = -movespeed;
             myRigidBody.velocity = new Vector2(moveVelocity, myRigidBody.velocity.y);
-            if (Input.GetKey(KeyCode.UpArrow) && grounded)
+            if (Input.GetKey(KeyCode.W) && grounded)
             {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpHeight);
             }
