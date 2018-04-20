@@ -10,6 +10,9 @@ TagManager:
   - Bullet
   - Destroyable
   - music_main_theme
+  - music_lvl1
+  - music_lvl2
+  - music_lvl3
   layers:
   - Default
   - TransparentFX
