@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 218468648}
   m_Layer: 8
   m_Name: platform1 (90)
-  m_TagString: Untagged
+  m_TagString: GroundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,7 +1209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 120
+  m_RootOrder: 104
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278200206
 GameObject:
@@ -5127,7 +5127,7 @@ GameObject:
   - component: {fileID: 1015896075}
   m_Layer: 8
   m_Name: platform1 (56)
-  m_TagString: Untagged
+  m_TagString: GroundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5470,7 +5470,7 @@ GameObject:
   - component: {fileID: 1038600742}
   m_Layer: 8
   m_Name: platform1 (88)
-  m_TagString: Untagged
+  m_TagString: GroundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7220,7 +7220,7 @@ GameObject:
   - component: {fileID: 1321676416}
   m_Layer: 8
   m_Name: platform1 (84)
-  m_TagString: Untagged
+  m_TagString: GroundLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
